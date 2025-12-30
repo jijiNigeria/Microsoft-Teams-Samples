@@ -50,7 +50,6 @@ The simplest way to run this sample in Teams is to use Microsoft 365 Agents Tool
 1. Sign in to Microsoft 365 Agents Toolkit with a **Microsoft 365 work or school account**
 1. Set `Startup Item` as `Microsoft Teams (browser)`.
 1. Press F5, or select Debug > Start Debugging menu in Visual Studio to start your app
-</br>![image](https://raw.githubusercontent.com/OfficeDev/TeamsFx/dev/docs/images/visualstudio/debug/debug-button.png)
 1. In the opened web browser, select Add button to install the app in Teams
 > If you do not have permission to upload custom apps (uploading), Microsoft 365 Agents Toolkit will recommend creating and using a Microsoft 365 Developer Program account - a free program to get your own dev environment sandbox that includes Teams.
 
@@ -98,17 +97,17 @@ The simplest way to run this sample in Teams is to use Microsoft 365 Agents Tool
 
 4. Setup Manifest for Teams
 - **This step is specific to Teams.**
-    - Edit the `manifest.json` contained in the `appManifest/` folder to replace with your MicrosoftAppId (that was created in step1 and is the same value of MicrosoftAppId) *everywhere* you see the place holder string `{{Microsoft-App-Id}}` (depending on the scenario the Microsoft App Id may occur multiple times in the `manifest.json`)
+    - Edit the `manifest.json` contained in the `appPackage/` folder to replace with your MicrosoftAppId (that was created in step1 and is the same value of MicrosoftAppId) *everywhere* you see the place holder string `{{MicrosoftAppId}}` (depending on the scenario the Microsoft App Id may occur multiple times in the `manifest.json`)
     - **Edit** the `manifest.json` for `validDomains` and replace `{{domain-name}}` with base Url of your domain. E.g. if you are using ngrok it would be `https://1234.ngrok-free.app` then your domain-name will be `1234.ngrok-free.app` and if you are using dev tunnels then your domain will be like: `12345.devtunnels.ms`.
-    - Zip up the contents of the `appManifest/` folder to create a `manifest.zip`
+    - Zip up the contents of the `appPackage/` folder to create a `manifest.zip`
     - Upload the `manifest.zip` to Teams (in the left-bottom *Apps* view, click "Upload a custom app")
 
   **Note:** If you want to test your app across multi hub like: Outlook/Office.com, please update the `manifest.json` in the `/AppManifest_Hub` folder with the required values.
 
 - Modify the `/appsettings.json` and fill in the following details:
-  - `{{Microsoft-App-Id}}` - Generated from Step 1 is the application app id
-  - `{{ Microsoft-App-Password}}` - Generated from Step 1, also referred to as Client secret
-  - `{{ Application Base Url }}` - Your application's base url. E.g. https://12345.ngrok-free.app if you are using ngrok and if you are using dev tunnels, your URL will be https://12345.devtunnels.ms.
+  - `{{MicrosoftAppId}}` - Generated from Step 1 is the application app id
+  - `{{MicrosoftAppPassword}}` - Generated from Step 1, also referred to as Client secret
+  - `{{MicrosoftAppTenantId}}` - Generated from Step 1, also referred to as Directory (tenant) ID
 
 ## Deploy to Teams
 Start debugging the project by hitting the `F5` key or click the debug icon in Visual Studio and click the `Start Debugging` green arrow button.
