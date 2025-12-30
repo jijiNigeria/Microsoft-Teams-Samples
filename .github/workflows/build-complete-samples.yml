@@ -204,6 +204,10 @@ jobs:
               name: 'tab-channel-group-config-page-auth'
               version: '6.0.x'
 
+            - project_path: 'samples/tab-channel-group-quickstart/csharp/Microsoft.Teams.Samples.TabChannelGroupQuickstart.Web/Microsoft.Teams.Samples.TabChannelGroupQuickstart.Web.csproj'
+              name: 'tab-channel-group-quickstart'
+              version: '6.0.x'
+
             - project_path: 'samples/tab-deeplink/csharp/DeepLinkBot/DeepLinkBot.csproj'
               name: 'tab-deeplink'
               version: '6.0.x'
