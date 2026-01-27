@@ -370,7 +370,7 @@ jobs:
 
             - project_path: 'samples/msgext-action/csharp/TeamsMessagingExtensionsAction.csproj'
               name: 'msgext-action'
-              version: '6.0.x'
+              version: '10.0.x'
 
             - project_path: 'samples/msgext-link-unfurling/csharp/TeamsLinkUnfurling.csproj'
               name: 'msgext-link-unfurling'
