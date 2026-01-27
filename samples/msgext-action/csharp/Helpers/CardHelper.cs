@@ -1,6 +1,7 @@
 ﻿using AdaptiveCards;
 using Microsoft.Bot.Schema.Teams;
 using Microsoft.BotBuilderSamples.Models;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace Microsoft.BotBuilderSamples.Helpers
@@ -32,7 +33,7 @@ namespace Microsoft.BotBuilderSamples.Helpers
                 {
                     new MessagingExtensionAttachment
                     {
-                        Content = adaptiveCard,
+                        Content = JsonConvert.DeserializeObject(adaptiveCard.ToJson()),
                         ContentType = AdaptiveCard.ContentType
                     }
                 };
@@ -59,7 +60,7 @@ namespace Microsoft.BotBuilderSamples.Helpers
                 {
                     new MessagingExtensionAttachment
                     {
-                        Content = adaptiveCard,
+                        Content = JsonConvert.DeserializeObject(adaptiveCard.ToJson()),
                         ContentType = AdaptiveCard.ContentType
                     }
                 };
